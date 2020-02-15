@@ -26,5 +26,5 @@ void loop() {
   Serial.println(outputValue);
 
   // converter to settle after the last reading:
-  delay(200);
+  delay(300);
 }
