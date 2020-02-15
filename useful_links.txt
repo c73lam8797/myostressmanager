@@ -2,3 +2,11 @@ Arduino Stuff:
 http://den.uwaterloo.ca/datasheet/436D.pdf
 https://learn.adafruit.com/getting-started-with-myoware-muscle-sensor/placing-electrodes
 https://medium.com/@leex5202/an-unofficial-introductory-tutorial-to-myoware-muscle-sensor-development-kit-e2169948e63
+
+Node - Arduino:
+https://hackernoon.com/arduino-serial-data-796c4f7d27ce
+https://askubuntu.com/questions/1056314/uploading-code-to-arduino-gives-me-the-error-avrdude-ser-open-cant-open-d
+
+
+https://material-ui.com/
+https://magic.reactjs.net/htmltojsx.htm
