@@ -1,0 +1,4 @@
+Arduino Stuff:
+http://den.uwaterloo.ca/datasheet/436D.pdf
+https://learn.adafruit.com/getting-started-with-myoware-muscle-sensor/placing-electrodes
+https://medium.com/@leex5202/an-unofficial-introductory-tutorial-to-myoware-muscle-sensor-development-kit-e2169948e63
