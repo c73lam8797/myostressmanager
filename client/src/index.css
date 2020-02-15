@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.header{
+  padding: 50px;
+  text-align: center;
+  background:	rgb(49, 58, 68);
+  font: large; 
+  font-family: "Segoe UI", sans-serif;
+}
+
+.title{
+  color: #6e6ed1;
+}

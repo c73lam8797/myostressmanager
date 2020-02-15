@@ -3,12 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 import App from './App';
-import HomeButton from './homebutton';
 import TabPanel from './taskbar';
+import Header from './header';
 
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Header />, document.getElementById('header'));
 ReactDOM.render(<TabPanel />, document.getElementById('taskbar'));
 
 // If you want your app to work offline and load faster, you can change

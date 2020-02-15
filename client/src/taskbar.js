@@ -4,10 +4,11 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import HomeButton from './homebutton';
+import Typography from '@material-ui/core/Typography';
+import  q from '@material-ui/core/Box';
 import HomePage from './homepage';
+import About from './about';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -60,17 +61,17 @@ export default function SimpleTabs() {
         <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
           <Tab label="Home" {...a11yProps(0)} />
           <Tab label="Display Graph" {...a11yProps(1)} />
-          <Tab label="Item Three" {...a11yProps(2)} />
+          <Tab label="About" {...a11yProps(2)} />
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
-
+        <HomePage />
       </TabPanel>
       <TabPanel value={value} index={1}>
         Item Two
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Item Three
+        <About />
       </TabPanel>
     </div>
   );

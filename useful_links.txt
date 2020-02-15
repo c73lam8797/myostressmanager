@@ -6,6 +6,8 @@ https://medium.com/@leex5202/an-unofficial-introductory-tutorial-to-myoware-musc
 Node - Arduino:
 https://hackernoon.com/arduino-serial-data-796c4f7d27ce
 https://askubuntu.com/questions/1056314/uploading-code-to-arduino-gives-me-the-error-avrdude-ser-open-cant-open-d
+https://serialport.io/docs/api-parser-readline
+https://blog.priyanshrastogi.com/introduction-to-internet-of-things-with-arduino-node-js-and-chart-js-cb4885d176c4
 
 
 https://material-ui.com/
