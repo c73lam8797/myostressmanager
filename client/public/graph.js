@@ -1,6 +1,3 @@
-import Chart from 'chart.js';
-import io from 'socket.io';
-
 let socket = io.connect('http://localhost:5000'); //connect to server
 
       let ctx = document.getElementById('myChart').getContext('2d');
@@ -12,7 +9,7 @@ let socket = io.connect('http://localhost:5000'); //connect to server
         data: {
         labels: [],
         datasets: [{
-            label: "Temperature",
+            label: "Electric Potential of the Muscle",
             borderColor: "#FF5733",
             data: [],
             fill: false,
