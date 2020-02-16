@@ -1,68 +1,43 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Inspiration
 
-## Available Scripts
+This system provides a tool for users to manage their stress better. Often times, when we are stressed, we are unaware of the tension we hold in our hands, or lack the ability to alleviate it. With the MyoWare sensor, our system allows users to be notified when they are stressed based on the amount of tension held in their hands. The display of the measured data allows users to receive a visual representation of what they are feeling, which encourages awareness of their stress.
 
-In the project directory, you can run:
+## Technologies
 
-### `yarn start`
+We built this full stack web app with the **M**ongoDB, **E**xpress, **R**eact, **N**ode.js stack. This allowed us to integrate front-end, back-end, and database components together as one cohesive system. We also utilized an **Arduino** board with a muscle sensor and coded in C++.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Libraries
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- React
+- Express
+- Material-UI
+- Chart.js
+- Mongoose
+- SerialPort
+- Socket.io
 
-### `yarn test`
+## How it works
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+First, the muscle sensor is attached to the user's arm and the sensor data is transferred via the Arduino to the server side of the app through the Node.js SerialPort library. Then, using the Socket.io library, which detects web sockets and enables bidirectional communication between clients and servers, the sensor data is continously transfereed to the front-end. Using the Chart.js library, a plot to display the data was created. The plot dynamically updates as long as sensor data continously transfers from the back-end to the front-end. The back-end of the web app is built upon the Express library for Node.js. The front-end of the web app is built with React which enabled us to create a single page application with dynamic rendering capabilities.
 
-### `yarn build`
+### Current Features
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Stress detection**
+- Arduino + Muscle Sensor + C++ Program
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+**Stress plotter**
+- Arduino -> Node.js + Express + Socket.io -> React + Chart.js
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Destress music recommendations**
+- Embedded Spotify play button frames
 
-### `yarn eject`
+### Planned Features
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**Music search**
+- API calls to query and get playlists/albums/songs the user can search for and then embedding the respective Spotify play button frame
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**User login along with stored stress data which they can access, view, add comments**
+- MongoDB integration with web app with RESTful API
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+**Machine learning models for descriptive and predictive analytics regarding stress levels**
+- Utilizing JS libraries such as TensorFlow.JS for machine learning models OR writing scripts in Python with its vast realm of Data Science libraries to build the models and then transfering results/visuals over to the web app
