@@ -18,7 +18,7 @@ We built this full stack web app with the **M**ongoDB, **E**xpress, **R**eact, *
 
 ## How it works
 
-First, the muscle sensor is attached to the user's arm and the sensor data is transferred via the Arduino to the server side of the app through the Node.js SerialPort library. Then, using the Socket.io library, which detects web sockets and enables bidirectional communication between clients and servers, the sensor data is continously transfereed to the front-end. Using the Chart.js library, a plot to display the data was created. The plot dynamically updates as long as sensor data continously transfers from the back-end to the front-end. The back-end of the web app is built upon the Express library for Node.js. The front-end of the web app is built with React which enabled us to create a single page application with dynamic rendering capabilities.
+First, the muscle sensor is attached to the user's arm and the sensor data is transferred via the Arduino to the server side of the app through the Node.js SerialPort library. Then, using the Socket.io library, which detects web sockets and enables bidirectional communication between clients and servers, the sensor data is continously transfered to the front-end. Using the Chart.js library, a plot to display the data was created. The plot dynamically updates as long as sensor data continously transfers from the back-end to the front-end. The back-end of the web app is built upon the Express library for Node.js. The front-end of the web app is built with React which enabled us to create a single page application with dynamic rendering capabilities.
 
 ### Current Features
 
