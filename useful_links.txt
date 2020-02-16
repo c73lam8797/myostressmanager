@@ -9,7 +9,15 @@ https://askubuntu.com/questions/1056314/uploading-code-to-arduino-gives-me-the-e
 https://serialport.io/docs/api-parser-readline
 https://blog.priyanshrastogi.com/introduction-to-internet-of-things-with-arduino-node-js-and-chart-js-cb4885d176c4
 https://stackoverflow.com/questions/52490413/display-multiple-sensor-data-from-serial-port-with-javascript-and-socket-io
+https://hackernoon.com/create-your-first-arduino-node-js-iot-visualization-app-in-under-15-minutes-619f8e6f7181
 
+React:
+https://stackoverflow.com/questions/34424845/adding-script-tag-to-react-jsx
+https://www.chartjs.org/docs/latest/
 
 https://material-ui.com/
 https://magic.reactjs.net/htmltojsx.htm
+
+API:
+https://www.taniarascia.com/how-to-connect-to-an-api-with-javascript/
+https://dev.to/beznet/build-a-rest-api-with-node-express-mongodb-4ho4

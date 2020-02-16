@@ -1,29 +1,26 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
 
 class HomePage extends React.Component {
-    // isStressed(){
-    //     const isStressed = 
-    // }
-
-    state = {
-        stressed: false,
+    constructor (props){
+        super (props);
+        this.state={stressed:false};
+        this.handleClick = this.handleClick.bind(this);
     }
 
-    handleSubmit(){
-
+    handleClick(){
+        this.setState(state => ({stressed:!state.stressed}));
     }
     
     render() {
         return (
             <div>
-                <form onSubmit={this.handleSubmit}>
-                    <button type = "submit">Stressed</button>
-                </form>
+                <button onClick={this.handleClick} type = "submit">{this.state.stressed? 'Not Stressed':'Stressed'}?</button>
+
                 <Typography variant="h6" gutterBottom>
                     You are currently...
                 </Typography>
+                <p>{this.state.stressed? 'Stressed':'Not Stressed'}</p>
             </div>
         )
     }

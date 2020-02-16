@@ -6,9 +6,11 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
-import  q from '@material-ui/core/Box';
+// import GraphEffect from './grapheffect';
+
 import HomePage from './homepage';
 import About from './about';
+
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -22,7 +24,7 @@ function TabPanel(props) {
       aria-labelledby={`simple-tab-${index}`}
       {...other}
     >
-      {value === index && <Box p={3}>{children}</Box>}
+      {value === index && <Box p={4}>{children}</Box>}
     </Typography>
   );
 }
@@ -62,16 +64,25 @@ export default function SimpleTabs() {
           <Tab label="Home" {...a11yProps(0)} />
           <Tab label="Display Graph" {...a11yProps(1)} />
           <Tab label="About" {...a11yProps(2)} />
+          <Tab label="Test" {...a11yProps(3)} />
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
         <HomePage />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
+        <h3>Myo Sensor Graph</h3>
+        <h4>Date: <span id="date"></span></h4>
+        {/* <GraphEffect /> */}
       </TabPanel>
       <TabPanel value={value} index={2}>
         <About />
+      </TabPanel>
+      <TabPanel value={value} index={3}>
+        <iframe src="https://open.spotify.com/embed/album/5Eevxp2BCbWq25ZdiXRwYd?si=D_xaXLNkQTqGjEqydKQ-Ig" 
+        allowTransparency="true" allow="encrypted-media" width={300} height={380} frameBorder={0} style={{padding: '10px'}} />
+        <iframe src="https://open.spotify.com/embed/album/5Eevxp2BCbWq25ZdiXRwYd?si=D_xaXLNkQTqGjEqydKQ-Ig" 
+        allowTransparency="true" allow="encrypted-media" width={300} height={380} frameBorder={0} style={{padding: '10px'}} />
       </TabPanel>
     </div>
   );

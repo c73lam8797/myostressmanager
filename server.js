@@ -1,8 +1,16 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+require('dotenv').config()
+
 
 const app = express();
 const port = process.env.PORT || 5000;
+
+mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true });
+const db = mongoose.connection;
+db.on('error', (error) => console.error(error));
+db.once('open', () => console.log('connected to database'));
 
 const server = app.listen(port, () => console.log(`Listening on port ${port}`));
 const io = require('socket.io')(server, {

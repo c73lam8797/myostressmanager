@@ -27,4 +27,6 @@ void loop() {
 
   // converter to settle after the last reading:
   delay(300);
+
+  // for ubuntu permissions: sudo chmod a+rw /dev/ttyACM0
 }
