@@ -10,6 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import HomePage from './homepage';
 import About from './about';
 import GraphEffect from './grapheffect';
+import Music from './music';
 
 
 function TabPanel(props) {
@@ -55,42 +56,32 @@ export default function SimpleTabs() {
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
-
-    // if (newValue ==1){
-    //   GraphEffect.state.clicked=true;
-    // }
-    // else {
-    //   GraphEffect.state.clicked=false;
-    // }
   };
     
 
   return (
     <div className={classes.root}>
       <AppBar position="static">
-        <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
+        <Tabs variant='fullWidth' value={value} onChange={handleChange} aria-label="simple tabs example">
           <Tab label="Home" {...a11yProps(0)} />
-          <Tab label="Display Graph" {...a11yProps(1)} />
-          <Tab label="About" {...a11yProps(2)} />
-          <Tab label="Test" {...a11yProps(3)} />
+          <Tab label="Stress Graph" {...a11yProps(1)} />
+          <Tab label="Music" {...a11yProps(2)} />
+          <Tab label="About This Project" {...a11yProps(3)} />
         </Tabs>
       </AppBar>
-      <TabPanel value={value} index={0}>
-        <HomePage />
+      <TabPanel id='color' value={value} index={0}>
+        <HomePage />  
       </TabPanel>
-      <TabPanel value={value} index={1}>
-        <h3>Myo Sensor Graph</h3>
-        <h4>Date: <span id="date"></span></h4>
+      <TabPanel id='color' value={value} index={1}>
+        <h3 style={{fontFamily: 'Montserrat', color: 'white'}}>MyoWare Sensor Graph</h3>
+        <h4 style={{fontFamily: 'Montserrat', color: 'white'}}>Date: <span id="date"></span></h4>
         <GraphEffect />
       </TabPanel>
-      <TabPanel value={value} index={2}>
-        <About />
+      <TabPanel id='music' value={value} index={2}>
+        <Music />
       </TabPanel>
-      <TabPanel value={value} index={3}>
-        <iframe src="https://open.spotify.com/embed/album/5Eevxp2BCbWq25ZdiXRwYd?si=D_xaXLNkQTqGjEqydKQ-Ig" 
-        allowTransparency="true" allow="encrypted-media" width={300} height={380} frameBorder={0} style={{padding: '10px'}} />
-        <iframe src="https://open.spotify.com/embed/album/5Eevxp2BCbWq25ZdiXRwYd?si=D_xaXLNkQTqGjEqydKQ-Ig" 
-        allowTransparency="true" allow="encrypted-media" width={300} height={380} frameBorder={0} style={{padding: '10px'}} />
+      <TabPanel id='color' value={value} index={3}>
+        <About />
       </TabPanel>
     </div>
   );

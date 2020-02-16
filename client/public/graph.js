@@ -23,39 +23,88 @@ if (typeof chart === 'undefined') {
             labels: [],
             datasets: [{
                 label: "Electric Potential of the Muscle",
-                borderColor: "#FF5733",
+                borderColor: "#FFFFFF",
                 data: [],
-                fill: false,
+                fill: true,
                 pointStyle: 'circle',
-                backgroundColor: '#3498DB',
+                backgroundColor: 'rgba(181, 197, 245, 0.4)',
                 pointRadius: 5,
                 pointHoverRadius: 7,
                 lineTension: 0,
+                fill: 'origin',
             }]
         },
-        options: {}  // Configuration options go here  
+        options: {
+            scales: {
+                xAxes: [{
+                    gridLines: {
+                        color: "rgba(255, 255, 255 )",
+                    },
+                    ticks: {
+                        fontColor: '#ffffff',
+                    },
+                }],
+                yAxes: [{
+                    gridLines: {
+                        color: "rgba(255, 255, 255 )",
+                    },
+                    ticks: {
+                        fontColor: '#ffffff',
+                    }, 
+                }],
+            },
+            legend: {
+                labels: {
+                    fontColor: "white",
+                },
+            }
+        }  // Configuration options go here  
     });
 }
 else {
     chart = new Chart(ctx, {
         // The type of chart we want to create
         type: 'line',
-        // The data for our dataset
         data: {
             labels: [],
             datasets: [{
                 label: "Electric Potential of the Muscle",
-                borderColor: "#FF5733",
+                borderColor: "#FFFFFF",
                 data: [],
-                fill: false,
+                fill: true,
                 pointStyle: 'circle',
-                backgroundColor: '#3498DB',
+                backgroundColor: 'rgba(181, 197, 245, 0.4)',
                 pointRadius: 5,
                 pointHoverRadius: 7,
                 lineTension: 0,
+                fill: 'origin',
             }]
         },
-        options: {}  // Configuration options go here  
+        options: {
+            scales: {
+                xAxes: [{
+                    gridLines: {
+                        color: "rgba(255, 255, 255 )",
+                    },
+                    ticks: {
+                        fontColor: '#ffffff',
+                    },
+                }],
+                yAxes: [{
+                    gridLines: {
+                        color: "rgba(255, 255, 255 )",
+                    },
+                    ticks: {
+                        fontColor: '#ffffff',
+                    }, 
+                }],
+            },
+            legend: {
+                labels: {
+                    fontColor: "white",
+                },
+            }
+        }  // Configuration options go here  
     });
 }
 

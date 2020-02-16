@@ -16,9 +16,20 @@ https://stackoverflow.com/questions/34424845/adding-script-tag-to-react-jsx
 https://www.chartjs.org/docs/latest/
 https://reactgo.com/render-script-tag-component/
 
+https://reactjs.org/docs/handling-events.html
+
 https://material-ui.com/
 https://magic.reactjs.net/htmltojsx.htm
 
 API:
 https://www.taniarascia.com/how-to-connect-to-an-api-with-javascript/
+https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/
+https://dev.to/techwatching/testing-your-api-with-rest-client-h23
+
+MongoDB:
+https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose
 https://dev.to/beznet/build-a-rest-api-with-node-express-mongodb-4ho4
+
+Spotify:
+https://developer.spotify.com/documentation/widgets/generate/play-button/
+https://developer.spotify.com/console/get-search-item/

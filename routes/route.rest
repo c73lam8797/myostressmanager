@@ -1,0 +1,19 @@
+GET http://localhost:5000/api/hello
+
+###
+
+POST http://localhost:5000/users/user
+Content-Type: application/json
+
+{
+    "name": "Derek"
+}
+
+###
+
+GET http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Derek"
+}

@@ -1,5 +1,4 @@
 import React from 'react';
-import useScript from './useScript';
 
 var s;
 
@@ -27,7 +26,6 @@ export default class GraphEffect extends React.Component {
     render() {
         return (
             <div ref={el => (this.div = el)} >
-                <p>Test</p>
             </div>
         );
     }     
