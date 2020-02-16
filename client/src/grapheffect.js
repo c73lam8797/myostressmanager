@@ -1,9 +1,7 @@
 import React from 'react';
 import useScript from './useScript';
 
-var s = document.createElement('script');
-s.src = "graph.js";
-s.async = true;
+var s;
 
 export default class GraphEffect extends React.Component {
     constructor(props) {
@@ -11,6 +9,10 @@ export default class GraphEffect extends React.Component {
     }
 
     componentDidMount() {
+        s = document.createElement('script');
+        s.src = "graph.js";
+        s.async = true;
+
         let chart = document.createElement('canvas');
         chart.id = 'myChart';
         document.getElementById('chart-container').appendChild(chart);

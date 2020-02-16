@@ -1,30 +1,64 @@
-let socket = io.connect('http://localhost:5000'); //connect to server
+if (typeof socket === 'undefined') {
+    var socket = io.connect('http://localhost:5000'); //connect to server
+}
+else {
+    socket.off('sensor', null);
+    socket.close();
+    socket = io.connect('http://localhost:5000');
+}
 
-let ctx = document.getElementById('myChart').getContext('2d');
-let chart = new Chart(ctx, {
-// The type of chart we want to create
-type: 'line',
+if (typeof ctx === 'undefined') {
+    var ctx = document.getElementById('myChart').getContext('2d');
+}
+else {
+    ctx = document.getElementById('myChart').getContext('2d');
+}
 
-// The data for our dataset
-data: {
-labels: [],
-datasets: [{
-    label: "Electric Potential of the Muscle",
-    borderColor: "#FF5733",
-    data: [],
-    fill: false,
-    pointStyle: 'circle',
-    backgroundColor: '#3498DB',
-    pointRadius: 5,
-    pointHoverRadius: 7,
-    lineTension: 0,
-}]
-},
+if (typeof chart === 'undefined') {
+    var chart = new Chart(ctx, {
+        // The type of chart we want to create
+        type: 'line',
+        // The data for our dataset
+        data: {
+            labels: [],
+            datasets: [{
+                label: "Electric Potential of the Muscle",
+                borderColor: "#FF5733",
+                data: [],
+                fill: false,
+                pointStyle: 'circle',
+                backgroundColor: '#3498DB',
+                pointRadius: 5,
+                pointHoverRadius: 7,
+                lineTension: 0,
+            }]
+        },
+        options: {}  // Configuration options go here  
+    });
+}
+else {
+    chart = new Chart(ctx, {
+        // The type of chart we want to create
+        type: 'line',
+        // The data for our dataset
+        data: {
+            labels: [],
+            datasets: [{
+                label: "Electric Potential of the Muscle",
+                borderColor: "#FF5733",
+                data: [],
+                fill: false,
+                pointStyle: 'circle',
+                backgroundColor: '#3498DB',
+                pointRadius: 5,
+                pointHoverRadius: 7,
+                lineTension: 0,
+            }]
+        },
+        options: {}  // Configuration options go here  
+    });
+}
 
-// Configuration options go here
-options: {}
-    
-});
 try {
     socket.on('sensor', function(data) { //As sensor data is received 
         // console.log(data.read);
@@ -48,8 +82,10 @@ try {
         chart.update(); //Update the graph.
         });
 }
+
 catch(error){
     console.error(error);
+    socket.off('sensor', null);
     throw new Error("stop script");
 }
 
