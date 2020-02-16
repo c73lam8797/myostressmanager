@@ -11,10 +11,14 @@ export default class GraphEffect extends React.Component {
     }
 
     componentDidMount() {
+        let chart = document.createElement('canvas');
+        chart.id = 'myChart';
+        document.getElementById('chart-container').appendChild(chart);
         this.div.appendChild(s);
     }
     
     componentWillUnmount() {
+        document.getElementById('chart-container').removeChild(document.getElementById('myChart'));
         this.div.removeChild(s);
     }
 

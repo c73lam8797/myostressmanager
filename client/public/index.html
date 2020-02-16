@@ -16,6 +16,7 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -35,8 +36,8 @@
     <!-- <h3>Myo Sensor Graph</h3>
     <h4>Date: <span id="date"></span></h4> -->
 
-    <div class="chart-container" style="position: relative; width:75vw; margin: auto;">
-      <canvas id="myChart"></canvas>
+    <div id="chart-container" style="position: relative; width:75vw; margin: auto;">
+      <!-- <canvas id="myChart"></canvas> -->
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>

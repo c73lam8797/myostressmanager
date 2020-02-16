@@ -25,25 +25,32 @@ datasets: [{
 options: {}
     
 });
+try {
+    socket.on('sensor', function(data) { //As sensor data is received 
+        // console.log(data.read);
+        let sensor = data.read.split(" ");
+        // console.log(sensor[2]);
+        // document.getElementById('date').innerHTML = data.date; //update the date
+        if(chart.data.labels.length != 15) { //If we have less than 15 data points in the graph
+            chart.data.labels.push(data.time);  //Add time in x-asix
+            chart.data.datasets.forEach((dataset) => {
+                dataset.data.push(sensor[2]); //Add sensor data in y-axis
+            });
+        }
+        else { //If there are already 15 data points in the graph.
+            chart.data.labels.shift(); //Remove first sensor data
+            chart.data.labels.push(data.time); //Insert latest sensor data
+            chart.data.datasets.forEach((dataset) => {
+                dataset.data.shift(); //Remove first sensor data
+                dataset.data.push(sensor[2]); //Insert latest sensor data
+            });
+        }
+        chart.update(); //Update the graph.
+        });
+}
+catch(error){
+    console.error(error);
+    throw new Error("stop script");
+}
 
-socket.on('sensor', function(data) { //As sensor data is received 
-// console.log(data.read);
-let sensor = data.read.split(" ");
-// console.log(sensor[2]);
-// document.getElementById('date').innerHTML = data.date; //update the date
-if(chart.data.labels.length != 15) { //If we have less than 15 data points in the graph
-    chart.data.labels.push(data.time);  //Add time in x-asix
-    chart.data.datasets.forEach((dataset) => {
-        dataset.data.push(sensor[2]); //Add sensor data in y-axis
-    });
-}
-else { //If there are already 15 data points in the graph.
-    chart.data.labels.shift(); //Remove first sensor data
-    chart.data.labels.push(data.time); //Insert latest sensor data
-    chart.data.datasets.forEach((dataset) => {
-        dataset.data.shift(); //Remove first sensor data
-        dataset.data.push(sensor[2]); //Insert latest sensor data
-    });
-}
-chart.update(); //Update the graph.
-});
+
