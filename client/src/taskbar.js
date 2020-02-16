@@ -6,10 +6,10 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
-// import GraphEffect from './grapheffect';
 
 import HomePage from './homepage';
 import About from './about';
+import GraphEffect from './grapheffect';
 
 
 function TabPanel(props) {
@@ -55,7 +55,15 @@ export default function SimpleTabs() {
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
+
+    // if (newValue ==1){
+    //   GraphEffect.state.clicked=true;
+    // }
+    // else {
+    //   GraphEffect.state.clicked=false;
+    // }
   };
+    
 
   return (
     <div className={classes.root}>
@@ -73,7 +81,7 @@ export default function SimpleTabs() {
       <TabPanel value={value} index={1}>
         <h3>Myo Sensor Graph</h3>
         <h4>Date: <span id="date"></span></h4>
-        {/* <GraphEffect /> */}
+        <GraphEffect />
       </TabPanel>
       <TabPanel value={value} index={2}>
         <About />

@@ -14,6 +14,7 @@ https://hackernoon.com/create-your-first-arduino-node-js-iot-visualization-app-i
 React:
 https://stackoverflow.com/questions/34424845/adding-script-tag-to-react-jsx
 https://www.chartjs.org/docs/latest/
+https://reactgo.com/render-script-tag-component/
 
 https://material-ui.com/
 https://magic.reactjs.net/htmltojsx.htm
