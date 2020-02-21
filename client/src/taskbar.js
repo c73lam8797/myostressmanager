@@ -74,7 +74,7 @@ export default function SimpleTabs() {
       </TabPanel>
       <TabPanel id='color' value={value} index={1}>
         <h3 style={{fontFamily: 'Montserrat', color: 'white'}}>MyoWare Sensor Graph</h3>
-        <h4 style={{fontFamily: 'Montserrat', color: 'white'}}>Date: <span id="date"></span></h4>
+        {/* <h4 style={{fontFamily: 'Montserrat', color: 'white'}}>Date: <span id="date"></span></h4> */}
         <GraphEffect />
       </TabPanel>
       <TabPanel id='music' value={value} index={2}>

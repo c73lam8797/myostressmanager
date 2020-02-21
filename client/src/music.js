@@ -4,6 +4,13 @@ function Music(){
     return(
         <div >
             <h2 style={{fontFamily: 'Montserrat', color: 'white'}} >Some Recommended Music...</h2>
+
+            <form>
+                <input value='Search on Spotify' />
+            </form>
+
+            <br />
+
             <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWXe9gFZP0gtP" 
             width={300} height={380} frameBorder={0} allowTransparency="true" allow="encrypted-media" style={{padding: '10px'}} />
 
